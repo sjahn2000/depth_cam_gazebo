@@ -1,0 +1,17 @@
+<launch>
+  <!-- Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find depth_camera_sim)/worlds/depth_camera_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Depth camera processor node -->
+  <node name="depth_camera_processor" pkg="depth_camera_sim" type="depth_camera_processor" output="screen"/>
+
+  <!-- RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find depth_camera_sim)/rviz/depth_camera.rviz" />
+</launch>
