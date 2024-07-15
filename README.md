@@ -6,13 +6,13 @@
 A simple simulation pakage for depth camera images
 
 ### Install
-cd catkin_ws/src
-git clone
+    $ cd catkin_ws/src
+    $ git clone https://github.com/sjahn2000/depth_cam_gazebo.git
 
 ### Build
-cd catkin_ws
-catkin_make
-source devel/setup.bash
+    $ cd catkin_ws
+    $ catkin_make
+    $ source devel/setup.bash
 
 ### Launch
-roslaunch depth_camera_sim depth_camera_sim.launch
+    $ roslaunch depth_camera_sim depth_camera_sim.launch
